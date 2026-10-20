@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Asteroid Collector</string>
+    <string name="title">Asteroid \n\t\tCollector ☄️</string>
+    <string name="h_user">User</string>
+    <string name="h_password">Password</string>
+    <string name="h_repeat_password">Repeat Password</string>
+    <string name="h_enter">Enter</string>
+    <string name="h_forgot_password">Forgot password?</string>
+
+    <string name="forget_password">Did you forget your password?</string>
+    <string name="welcome_message">Welcome</string>
+
+    <string name="e_user">The user written is not valid</string>
+    <string name="e_password">The password written is not valid</string>
+    <string name="e_passwords_matching">The passwords do not match</string>
+    <string name="e_incorrect_user_password">User or password incorrect</string>
+
+    <string name="f_email">Email</string>
+    <string name="e_email">The email written is not valid</string>
+
+    <string name="s_email_send">angeldq1997@gmail.com</string>
+    <string name="s_email_subject">Forgotten password</string>
+    <string name="s_email_body">Hello I forgot my user, help me remember my password, my user is: </string>
+</resources>
