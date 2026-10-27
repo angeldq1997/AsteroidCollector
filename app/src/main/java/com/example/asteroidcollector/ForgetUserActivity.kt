@@ -2,7 +2,6 @@ package com.example.asteroidcollector
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.asteroidcollector.databinding.ActivityForgetUserBinding
 
@@ -12,13 +11,12 @@ class ForgetUserActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         binding = ActivityForgetUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        initlistener()
+        initListeners()
     }
 
-    private fun initlistener() {
+    private fun initListeners() {
         binding.bEnterF.setOnClickListener {
             val emailBody = (R.string.s_email_body.toString()+binding.etUserF.toString())
 

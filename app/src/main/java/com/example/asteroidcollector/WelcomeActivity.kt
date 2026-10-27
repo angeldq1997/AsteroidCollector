@@ -8,6 +8,9 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.asteroidcollector.databinding.ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity() {
+    companion object {
+        const val PARAMETER_USER = "parameter_user"
+    }
     private lateinit var binding : ActivityWelcomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,10 +18,8 @@ class WelcomeActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+
+        val welcomeMessage : String = "Welcome " + intent.getStringExtra("parameter_user")
+        binding.tvWelcome.text = welcomeMessage
     }
 }

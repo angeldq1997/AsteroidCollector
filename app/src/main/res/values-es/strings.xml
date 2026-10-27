@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Recolector de asteroides</string>
+    <string name="title">Recolector de \n\t\tasteroides ☄️</string>
+    <string name="h_user">Usuario</string>
+    <string name="h_password">Contraseña</string>
+    <string name="h_repeat_password">Repite Contraseña</string>
+    <string name="h_enter">Entrar</string>
+    <string name="h_forgot_password">He olvidado la contraseña</string>
+    <string name="h_exit">Salir</string>
+    <string name="h_sign_in">Registrarse</string>
+
+    <string name="forget_password">¿Has olvidado la contraseña?</string>
+    <string name="welcome_message">Bienvenido</string>
+
+    <string name="e_user">El usuario introducido no es válido</string>
+    <string name="e_user_empty">El usuario está vacío</string>
+    <string name="e_password">La contraseña introducida no es válida</string>
+    <string name="e_password_empty">La contraseña está vacía</string>
+    <string name="e_rep_password_empty">La contraseña de confirmación está vacía</string>
+    <string name="e_passwords_matching">Las contraseñas no coinciden</string>
+    <string name="e_incorrect_user_password">Usuario o contraseña incorrecto</string>
+    <string name="e_user_already_exists">Usuario ya en sistema</string>
+
+    <string name="e_sign_in">Ha habido un error al iniciar sesión</string>
+
+    <string name="f_email">Email</string>
+    <string name="e_email">El email introducido no es válido</string>
+
+    <string name="s_email_send">angeldq1997@gmail.com</string>
+    <string name="s_email_subject">Contraseña olvidada</string>
+    <string name="s_email_body">"Hola he olvidado mis datos de inicio de sesión, mi usuario es: "</string>
+
+    <string name="t_opening_welcome">Sesión iniciada correctamente, redirigiendo a la pantalla de inicio</string>
+    <string name="t_correct_sign_in">Registro realizado correctamente, el usuario se creado con éxito</string>
+    <string name="t_canceled_sign_in">Cancelado registro del usuario</string>
+    <string name="t_canceled_login">Cancelado inicio de sesión</string>
+
+    <string name="d_success_login">Inicio de sesión</string>
+    <string name="d_confirm_login">Correct Sign in</string>
+    <string name="d_cancel_login">Cancelar iniciar sesión</string>
+
+    <string name="d_success_sign_in">Registro realizado con éxito</string>
+    <string name="d_confirm_sign_in">Confirmar registro de usuario</string>
+    <string name="d_cancel_sign_in">Cancelar registrarse</string>
+</resources>
