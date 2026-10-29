@@ -1,11 +1,10 @@
-package com.example.asteroidcollector
+package com.example.loginangelgarciaruiz
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.asteroidcollector.databinding.ActivityWelcomeBinding
+import com.example.loginangelgarciaruiz.databinding.ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity() {
     companion object {
@@ -21,5 +20,13 @@ class WelcomeActivity : AppCompatActivity() {
 
         val welcomeMessage : String = "Welcome " + intent.getStringExtra("parameter_user")
         binding.tvWelcome.text = welcomeMessage
+        setListeners()
+    }
+
+    private fun setListeners() {
+        binding.bExitWelcome.setOnClickListener {
+            Toast.makeText(this, getText(R.string.h_exit), Toast.LENGTH_LONG).show()
+            finish()
+        }
     }
 }

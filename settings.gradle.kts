@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Asteroid(Collector"
+rootProject.name = "LoginAngelGarciaRuiz"
 include(":app")

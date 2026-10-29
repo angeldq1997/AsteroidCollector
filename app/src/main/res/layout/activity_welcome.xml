@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/stars_background"
-    android:gravity="center_horizontal"
+    android:gravity="center"
     android:orientation="vertical"
     android:padding="14dp"
     tools:context=".WelcomeActivity">
@@ -27,6 +27,12 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@color/white" />
+
+    <ImageView
+        android:id="@+id/iv_confetti"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/confetti" />
 
     <Button
         android:id="@+id/b_exit_welcome"

@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.asteroidcollector"
+    namespace = "com.example.loginangelgarciaruiz"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.example.asteroidcollector"
+        applicationId = "com.example.loginangelgarciaruiz"
         minSdk = 31
         targetSdk = 37
         versionCode = 1

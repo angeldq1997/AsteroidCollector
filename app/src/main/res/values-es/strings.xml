@@ -34,6 +34,9 @@
     <string name="t_correct_sign_in">Registro realizado correctamente, el usuario se creado con éxito</string>
     <string name="t_canceled_sign_in">Cancelado registro del usuario</string>
     <string name="t_canceled_login">Cancelado inicio de sesión</string>
+    <string name="t_correct_login">Inicio de sesión exitoso</string>
+    <string name="t_fill_repeat_password">Para registrarse por favor rellene repite contraseña</string>
+    <string name="t_returning_home">Volviendo a pantalla de inicio de sesión</string>
 
     <string name="d_success_login">Inicio de sesión</string>
     <string name="d_confirm_login">Correct Sign in</string>

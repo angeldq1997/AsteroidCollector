@@ -6,13 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/stars_background"
-    android:gravity="center_horizontal"
+    android:gravity="center"
     android:orientation="vertical"
     android:padding="14dp"
     tools:context=".ForgetUserActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/f_tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -50,7 +50,7 @@
         android:text="@string/e_email"
         android:textColor="@color/red"
         android:textSize="24sp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/et_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,11 +70,28 @@
         android:textColorHint="@color/white"
         android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/b_enterF"
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/h_enter"
-        android:textSize="24sp" />
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/b_exitF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="@string/h_exit"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/b_enterF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/h_enter"
+            android:textSize="24sp" />
+
+    </LinearLayout>
 
 </LinearLayout>

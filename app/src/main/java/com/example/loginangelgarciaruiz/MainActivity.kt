@@ -1,18 +1,19 @@
-package com.example.asteroidcollector
+package com.example.loginangelgarciaruiz
 
 import android.app.AlertDialog
-import android.app.Dialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.asteroidcollector.databinding.ActivityMainBinding
 import androidx.core.view.isGone
+import com.example.loginangelgarciaruiz.databinding.ActivityMainBinding
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
 
 class MainActivity : AppCompatActivity() {
     val user : String = "Manolo"
-    val password : String = "123456"
+    val password : String = "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"
     var newUser : String = ""
     var newUserPassword : String = ""
     private lateinit var binding : ActivityMainBinding
@@ -34,15 +35,16 @@ class MainActivity : AppCompatActivity() {
         binding.bRegister.setOnClickListener {
             if (binding.etRepeatPassword.isGone){
                 binding.etRepeatPassword.visibility = View.VISIBLE
-                Toast.makeText(this, "To sign in please fill out repeat password", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getText(R.string.t_fill_repeat_password), Toast.LENGTH_LONG).show()
             } else{
                 resetErrorTexts()
                 checkSignIn()
             }
         }
 
-        binding.bRegister.setOnHoverListener { view, event -> true
-
+        binding.tvForgetPassword.setOnClickListener {
+            val i = Intent(this, ForgetUserActivity::class.java)
+            startActivity(i)
         }
     }
 
@@ -78,12 +80,13 @@ class MainActivity : AppCompatActivity() {
 
             val builder: AlertDialog.Builder = AlertDialog.Builder(this)
             builder
-                .setMessage(R.string.t_correct_sign_in)
-                .setTitle(R.string.d_success_sign_in)
+                .setMessage(R.string.t_correct_login)
+                .setTitle(R.string.d_success_login)
                 .setNegativeButton(R.string.d_cancel_login) { dialog, which ->
-                    Toast.makeText(this, R.string.t_canceled_login, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, getText(R.string.t_canceled_login), Toast.LENGTH_LONG).show()
                 }
                 .setPositiveButton(R.string.d_confirm_login) { dialog, which ->
+                    Toast.makeText(this, getText(R.string.t_correct_login), Toast.LENGTH_LONG).show()
                     startActivity(i)
                 }
             val dialog: AlertDialog = builder.create()
@@ -125,7 +128,7 @@ class MainActivity : AppCompatActivity() {
         //CORRECT_SIGN_IN
         } else if (matchingPasswords()) {
             newUser = binding.etUser.text.toString()
-            newUserPassword = binding.etPassword.text.toString()
+            newUserPassword = sha256(binding.etPassword.text.toString())
 
             val builder: AlertDialog.Builder = AlertDialog.Builder(this)
             builder
@@ -154,10 +157,24 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun correctUser() : Boolean{
-        return binding.etUser.text.toString() == user && binding.etPassword.text.toString() == password
+        return binding.etUser.text.toString() == user && sha256(binding.etPassword.text.toString()) == password
     }
 
     private fun correctNewUser() : Boolean{
-        return  ( binding.etUser.text.toString() == newUser && binding.etPassword.text.toString() == newUserPassword )
+        return  ( binding.etUser.text.toString() == newUser && sha256(binding.etPassword.text.toString()) == newUserPassword )
+    }
+
+    @Throws(NoSuchAlgorithmException::class)
+    fun sha256(password: String): String {
+        var sha: MessageDigest? = null
+        sha = MessageDigest.getInstance("SHA-256")
+        val digest = sha.digest(password.toByteArray())
+
+        val hexString = StringBuilder()
+
+        for (b in digest) {
+            hexString.append(String.format("%02x", b))
+        }
+        return hexString.toString()
     }
 }

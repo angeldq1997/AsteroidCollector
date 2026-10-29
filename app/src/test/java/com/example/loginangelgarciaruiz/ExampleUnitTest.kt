@@ -1,4 +1,4 @@
-package com.example.asteroidcollector
+package com.example.loginangelgarciaruiz
 
 import org.junit.Test
 
