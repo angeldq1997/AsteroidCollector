@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Recolector de asteroides</string>
+    <string name="app_name">Asteroid Collector</string>
     <string name="title">Recolector de \n\t\tasteroides ☄️</string>
     <string name="h_user">Usuario</string>
     <string name="h_password">Contraseña</string>
@@ -30,6 +30,7 @@
     <string name="s_email_subject">Contraseña olvidada</string>
     <string name="s_email_body">"Hola he olvidado mis datos de inicio de sesión, mi usuario es: "</string>
 
+    <string name="s_email_cont">Mi correo es:</string>
     <string name="t_opening_welcome">Sesión iniciada correctamente, redirigiendo a la pantalla de inicio</string>
     <string name="t_correct_sign_in">Registro realizado correctamente, el usuario se creado con éxito</string>
     <string name="t_canceled_sign_in">Cancelado registro del usuario</string>
@@ -39,7 +40,7 @@
     <string name="t_returning_home">Volviendo a pantalla de inicio de sesión</string>
 
     <string name="d_success_login">Inicio de sesión</string>
-    <string name="d_confirm_login">Correct Sign in</string>
+    <string name="d_confirm_login">Confirmar inicio de sesión</string>
     <string name="d_cancel_login">Cancelar iniciar sesión</string>
 
     <string name="d_success_sign_in">Registro realizado con éxito</string>

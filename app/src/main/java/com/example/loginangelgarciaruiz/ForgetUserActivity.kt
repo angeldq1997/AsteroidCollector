@@ -24,7 +24,7 @@ class ForgetUserActivity : AppCompatActivity() {
             val p : Pattern = Pattern.compile(emailRegex)
             val email : String = binding.etEmailF.text.toString()
             if ( email.isNotEmpty() && p.matcher(email).matches()){
-                val emailBody = (getText(R.string.s_email_body).toString()+binding.etUserF.toString())
+                val emailBody = (getText(R.string.s_email_body).toString()+binding.etUserF.text.toString()+"\n"+getText(R.string.s_email_cont)+binding.etEmailF.text.toString())
 
                 val intent = Intent(Intent.ACTION_SEND)
 
