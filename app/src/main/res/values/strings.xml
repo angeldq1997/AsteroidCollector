@@ -28,7 +28,8 @@
 
     <string name="s_email_send">angeldq1997@gmail.com</string>
     <string name="s_email_subject">Forgotten password</string>
-    <string name="s_email_body">Hello I forgot my user, help me remember my password, my user is: </string>
+    <string name="s_email_body">Hello I forgot my login data, help me remember my password, my user is: </string>
+    <string name="s_email_cont">My email is: </string>
 
     <string name="t_opening_welcome">Login correct, redirecting to home page</string>
     <string name="t_correct_sign_in">Sign in correct, user created successfully</string>
