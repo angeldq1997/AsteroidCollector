@@ -29,8 +29,8 @@
     <string name="s_email_send">angeldq1997@gmail.com</string>
     <string name="s_email_subject">Contraseña olvidada</string>
     <string name="s_email_body">"Hola he olvidado mis datos de inicio de sesión, mi usuario es: "</string>
+    <string name="s_email_cont">Mi correo es: </string>
 
-    <string name="s_email_cont">Mi correo es:</string>
     <string name="t_opening_welcome">Sesión iniciada correctamente, redirigiendo a la pantalla de inicio</string>
     <string name="t_correct_sign_in">Registro realizado correctamente, el usuario se creado con éxito</string>
     <string name="t_canceled_sign_in">Cancelado registro del usuario</string>

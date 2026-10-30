@@ -28,7 +28,7 @@ class ForgetUserActivity : AppCompatActivity() {
 
                 val intent = Intent(Intent.ACTION_SEND)
 
-                intent.putExtra(Intent.EXTRA_EMAIL, getText(R.string.s_email_send))
+                intent.putExtra(Intent.EXTRA_EMAIL, arrayOf(getText(R.string.s_email_send)) )
                 intent.putExtra(Intent.EXTRA_SUBJECT, getText(R.string.s_email_subject))
                 intent.putExtra(Intent.EXTRA_TEXT, emailBody)
 
